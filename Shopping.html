@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color:azure;
+        font-family:serif;
+      }
+      h1{
+        text-align:center;
+        padding:20px;
+        color:white;
+        background-color:lightblue;
+      }
+      .products{
+        gap:20px;
+        display:flex;
+        justify-content: center;
+flex-wrap: wrap;
+      }
+      .product{
+        padding:15px;
+       width:200px;
+        color:black;
+        text-align:center;
+        box-shadow: 0 0 8px grey;
+        border-radius:10px;
+      }
+      .product img{
+        width:100%;
+        height:180px;
+        object-fit:cover;
+        border-radius:8px;
+      }
+      button{
+        color:black;
+        background-color:#ff69b4;
+        padding:10px;
+        border-radius:5px;
+      }
+      #Cart{
+        text-align:center;
+        background-color:#fff0f5;
+        padding:15px;
+        margin:25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shopping</h1>
+    <div class="products">
+      <div class="product">
+        <img src="Bag.jpg">
+        <h2>Hand bag</h2>
+        <p>850</p>
+        <button onclick="items=items+1;total=total+850;
+          document.getElementById('items').innerHTML=items;
+          document.getElementById('total').innerHTML=total;">Add to Cart</button></div>
+      <div class="product">
+        <img src="glasses.jpg">
+        <h2>Cute Fancy Glasses </h2>
+        <p>250</p>
+        <button onclick ="items=items+1; total=total+250;
+          document.getElementById('items').innerHTML=items;
+          document.getElementById('total').innerHTML=total;">Add to Cart</button></div>
+      <div class="product">
+        <img src="Shoes.jpg">
+        <h2>White korean shoes for girls</h2>
+        <p>900</p>
+        <button onclick="items=items+1; total=total+900;
+          document.getElementById('items').innerHTML=items;
+          document.getElementById('total').innerHTML=total;">Add to Cart</button>
+      </div>
+    </div>
+    <div id="Cart">
+      <h2>Cart</h2>
+      <p>Items</p><span id="items">0</span>
+      <p>total</p><span id="total">0</span>
+    </div>
+    <script>
+      let items=0;
+      let total=0;
+    </script>
+  </body>
+</html>
